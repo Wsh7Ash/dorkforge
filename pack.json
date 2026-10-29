@@ -1,0 +1,611 @@
+{
+  "name": "dorkforge",
+  "version": "1.0.0",
+  "category": "bug-bounty-tooling",
+  "license": "MIT",
+  "runtime": "Claude Code, opencode, or any agent runtime that loads SKILL.md files",
+  "description": "50 validated skills for dork-driven asset discovery, plus a DSL that compiles one intent to Google, GitHub or Shodan syntax with a validation gate and a curated template pack.",
+  "skill_count": 50,
+  "skills": [
+    {
+      "slug": "define-hunting-intent",
+      "title": "Define Hunting Intent",
+      "path": "skills/define-hunting-intent/SKILL.md",
+      "tags": [
+        "frame",
+        "intent",
+        "method"
+      ],
+      "meta_phase": "frame",
+      "sha256": "e53e580b34a4c74270b167835b1236710111fe6879eeedd7529ee536ee6b910d"
+    },
+    {
+      "slug": "passive-recon-boundary",
+      "title": "Passive Recon Boundary",
+      "path": "skills/passive-recon-boundary/SKILL.md",
+      "tags": [
+        "frame",
+        "passive",
+        "scope"
+      ],
+      "meta_phase": "frame",
+      "sha256": "f641706e3fd262a85c209f1c274127d2cd71da176897adb5d2d1d16c1fac1416"
+    },
+    {
+      "slug": "asset-scope-mapping",
+      "title": "Asset Scope Mapping",
+      "path": "skills/asset-scope-mapping/SKILL.md",
+      "tags": [
+        "frame",
+        "scope",
+        "variables"
+      ],
+      "meta_phase": "frame",
+      "sha256": "f62e6fbfc48a8e6544a061b2ab4043e201a34796aaf5761976f1270f37b3102c"
+    },
+    {
+      "slug": "index-freshness-model",
+      "title": "Index Freshness Model",
+      "path": "skills/index-freshness-model/SKILL.md",
+      "tags": [
+        "frame",
+        "freshness",
+        "expectations"
+      ],
+      "meta_phase": "frame",
+      "sha256": "448904689d1c27f007550cce7ab65d2cce3a979c3a26044e4024148afe09a08b"
+    },
+    {
+      "slug": "engine-selection",
+      "title": "Engine Selection",
+      "path": "skills/engine-selection/SKILL.md",
+      "tags": [
+        "frame",
+        "engines",
+        "selection"
+      ],
+      "meta_phase": "frame",
+      "sha256": "6be6361e9a5860df87ec3dad5262ccda9d247cd66a2b90db00b7e77c2945dce4"
+    },
+    {
+      "slug": "false-positive-model",
+      "title": "False Positive Model",
+      "path": "skills/false-positive-model/SKILL.md",
+      "tags": [
+        "frame",
+        "triage",
+        "quality"
+      ],
+      "meta_phase": "frame",
+      "sha256": "7a4cd7a06e4422fffaa18eb317939e24920ed3f8f26667caea7e88a67c787422"
+    },
+    {
+      "slug": "signal-versus-volume",
+      "title": "Signal Versus Volume",
+      "path": "skills/signal-versus-volume/SKILL.md",
+      "tags": [
+        "frame",
+        "precision",
+        "queries"
+      ],
+      "meta_phase": "frame",
+      "sha256": "58c8a898fd583fff39d10ec38d1f6099d17a70b9f4996de097df4f5fff75ac3f"
+    },
+    {
+      "slug": "program-rule-constraints",
+      "title": "Program Rule Constraints",
+      "path": "skills/program-rule-constraints/SKILL.md",
+      "tags": [
+        "frame",
+        "rules",
+        "compliance"
+      ],
+      "meta_phase": "frame",
+      "sha256": "b44bf4893d70b3f778a05f3a2ceb9c2dda4d9123fd6bf5105014e2d2cb23ac94"
+    },
+    {
+      "slug": "legal-and-ethics-gate",
+      "title": "Legal and Ethics Gate",
+      "path": "skills/legal-and-ethics-gate/SKILL.md",
+      "tags": [
+        "frame",
+        "ethics",
+        "safety"
+      ],
+      "meta_phase": "frame",
+      "sha256": "cc55dee96296621d7639bc983e88bb4c44a6d6733ec08a7b0bc90a30c3cc4232"
+    },
+    {
+      "slug": "dsl-field-mapping",
+      "title": "Dsl Field Mapping",
+      "path": "skills/dsl-field-mapping/SKILL.md",
+      "tags": [
+        "compose",
+        "dsl",
+        "portability"
+      ],
+      "meta_phase": "compose",
+      "sha256": "c0c2c0d01dfc26fb93b8981422f13d444613a914996cc57d311a767fff445c29"
+    },
+    {
+      "slug": "quoted-phrase-precision",
+      "title": "Quoted Phrase Precision",
+      "path": "skills/quoted-phrase-precision/SKILL.md",
+      "tags": [
+        "compose",
+        "phrases",
+        "precision"
+      ],
+      "meta_phase": "compose",
+      "sha256": "de6fd387bc2dfc1a5600c789ae67b5a15b5203336ba27cf72a51e1fe80129c76"
+    },
+    {
+      "slug": "negation-to-narrow",
+      "title": "Negation to Narrow",
+      "path": "skills/negation-to-narrow/SKILL.md",
+      "tags": [
+        "compose",
+        "negation",
+        "precision"
+      ],
+      "meta_phase": "compose",
+      "sha256": "2a11a5ca9418640a43581d66a27f0bc0b497e59e77278e797960131b8fb75fe0"
+    },
+    {
+      "slug": "filetype-targeting",
+      "title": "Filetype Targeting",
+      "path": "skills/filetype-targeting/SKILL.md",
+      "tags": [
+        "compose",
+        "filetype",
+        "documents"
+      ],
+      "meta_phase": "compose",
+      "sha256": "6859e503982f0275daffbecd90a56f65d6dab84cf03c07a21279da1f98296b2c"
+    },
+    {
+      "slug": "path-versus-filename",
+      "title": "Path Versus Filename",
+      "path": "skills/path-versus-filename/SKILL.md",
+      "tags": [
+        "compose",
+        "path",
+        "filename"
+      ],
+      "meta_phase": "compose",
+      "sha256": "78d98b32c29f21a3201828bae1cd71a660de86086d48d89c5d51fde70bbfa66a"
+    },
+    {
+      "slug": "intitle-signature",
+      "title": "Intitle Signature",
+      "path": "skills/intitle-signature/SKILL.md",
+      "tags": [
+        "compose",
+        "intitle",
+        "fingerprint"
+      ],
+      "meta_phase": "compose",
+      "sha256": "faddfed2fe40fcd049f2c9e092ae0c2c4ede6e48c37c0d98a66b5006a357db29"
+    },
+    {
+      "slug": "intext-error-signatures",
+      "title": "Intext Error Signatures",
+      "path": "skills/intext-error-signatures/SKILL.md",
+      "tags": [
+        "compose",
+        "intext",
+        "errors"
+      ],
+      "meta_phase": "compose",
+      "sha256": "5ade4ea89d6949028dbd41fd5b253cd87af808fa1de9d99e8d8618d34226428f"
+    },
+    {
+      "slug": "template-variable-substitution",
+      "title": "Template Variable Substitution",
+      "path": "skills/template-variable-substitution/SKILL.md",
+      "tags": [
+        "compose",
+        "templates",
+        "reuse"
+      ],
+      "meta_phase": "compose",
+      "sha256": "fdf0d87a00c1c6d1966fd3ee170c97e036d1671f36b02cf617529ab1b1cf8442"
+    },
+    {
+      "slug": "operator-combining",
+      "title": "Operator Combining",
+      "path": "skills/operator-combining/SKILL.md",
+      "tags": [
+        "compose",
+        "operators",
+        "boolean"
+      ],
+      "meta_phase": "compose",
+      "sha256": "c4a29e97f835c1cb3d92d79a055e9ce769176f83f83158d46aed83e37812d1eb"
+    },
+    {
+      "slug": "syntax-gate-before-search",
+      "title": "Syntax Gate Before Search",
+      "path": "skills/syntax-gate-before-search/SKILL.md",
+      "tags": [
+        "validate",
+        "syntax",
+        "gate"
+      ],
+      "meta_phase": "validate",
+      "sha256": "6233f8f0338257725eab0783559c953f11d1eba77bf65e810f91b1298304cee7"
+    },
+    {
+      "slug": "engine-capability-check",
+      "title": "Engine Capability Check",
+      "path": "skills/engine-capability-check/SKILL.md",
+      "tags": [
+        "validate",
+        "engines",
+        "capability"
+      ],
+      "meta_phase": "validate",
+      "sha256": "8fae75388afb0e3269976010075a5e96c682b3d231b5b41648802d2139ca5804"
+    },
+    {
+      "slug": "encoded-url-review",
+      "title": "Encoded Url Review",
+      "path": "skills/encoded-url-review/SKILL.md",
+      "tags": [
+        "validate",
+        "encoding",
+        "urls"
+      ],
+      "meta_phase": "validate",
+      "sha256": "07e757cd60620a0aeccfa0aa886a4b339e4d50d85b2727c9d9ed059ed03c5160"
+    },
+    {
+      "slug": "dead-query-detection",
+      "title": "Dead Query Detection",
+      "path": "skills/dead-query-detection/SKILL.md",
+      "tags": [
+        "validate",
+        "maintenance",
+        "queries"
+      ],
+      "meta_phase": "validate",
+      "sha256": "da692c8eadb9e33b2c115a202a2241dd5b1b0873b223da9b3280e5d1a6e85e6f"
+    },
+    {
+      "slug": "result-count-sanity",
+      "title": "Result Count Sanity",
+      "path": "skills/result-count-sanity/SKILL.md",
+      "tags": [
+        "validate",
+        "counts",
+        "diagnostics"
+      ],
+      "meta_phase": "validate",
+      "sha256": "359bb00becf54f045be6c65e2963bbb92955d0f7df70e305a640e3ac89ba8106"
+    },
+    {
+      "slug": "false-negative-check",
+      "title": "False Negative Check",
+      "path": "skills/false-negative-check/SKILL.md",
+      "tags": [
+        "validate",
+        "false-negative",
+        "controls"
+      ],
+      "meta_phase": "validate",
+      "sha256": "192792fa5c0b4dff4eb290c56a1846785032ba44d4c016dccabbf200683e432b"
+    },
+    {
+      "slug": "template-risk-level",
+      "title": "Template Risk Level",
+      "path": "skills/template-risk-level/SKILL.md",
+      "tags": [
+        "validate",
+        "risk",
+        "safety"
+      ],
+      "meta_phase": "validate",
+      "sha256": "511e1d7c669876bc1be209d6fe6eaa7a9c65880d1ecea0c9a92004543f65b8a9"
+    },
+    {
+      "slug": "query-reproducibility",
+      "title": "Query Reproducibility",
+      "path": "skills/query-reproducibility/SKILL.md",
+      "tags": [
+        "validate",
+        "reproducibility",
+        "evidence"
+      ],
+      "meta_phase": "validate",
+      "sha256": "dcdfe9924fd1197cdfc4017bb29af94cc550811f836415e90d1a620977ebef25"
+    },
+    {
+      "slug": "subdomain-enumeration-passive",
+      "title": "Subdomain Enumeration Passive",
+      "path": "skills/subdomain-enumeration-passive/SKILL.md",
+      "tags": [
+        "target",
+        "subdomains",
+        "passive"
+      ],
+      "meta_phase": "target",
+      "sha256": "6b2544f4f7d549b579f41bf3d49286f7bb92dde4126e74b6617348a7abd14cf6"
+    },
+    {
+      "slug": "cloud-bucket-naming",
+      "title": "Cloud Bucket Naming",
+      "path": "skills/cloud-bucket-naming/SKILL.md",
+      "tags": [
+        "target",
+        "cloud",
+        "naming"
+      ],
+      "meta_phase": "target",
+      "sha256": "0b4d1afcda449e357a0da0a83dffdc669034060db1b736b819317594fc98e441"
+    },
+    {
+      "slug": "api-doc-discovery",
+      "title": "Api Doc Discovery",
+      "path": "skills/api-doc-discovery/SKILL.md",
+      "tags": [
+        "target",
+        "api",
+        "documentation"
+      ],
+      "meta_phase": "target",
+      "sha256": "ef2b5762fa85bd3ae343bf1a81c45965bfbb97d0d4232deea7789ac8259be5f4"
+    },
+    {
+      "slug": "exposed-vcs-roots",
+      "title": "Exposed Vcs Roots",
+      "path": "skills/exposed-vcs-roots/SKILL.md",
+      "tags": [
+        "target",
+        "vcs",
+        "exposure"
+      ],
+      "meta_phase": "target",
+      "sha256": "0007446bff42d3695d0ac5038779ea6d6e1818191688ad75a6554d94ca3bbade"
+    },
+    {
+      "slug": "backup-naming-patterns",
+      "title": "Backup Naming Patterns",
+      "path": "skills/backup-naming-patterns/SKILL.md",
+      "tags": [
+        "target",
+        "backup",
+        "naming"
+      ],
+      "meta_phase": "target",
+      "sha256": "002206b18b02039e9476702cd66b82b3b727505af190403ae3155b7d983acb64"
+    },
+    {
+      "slug": "third-party-key-discovery",
+      "title": "Third Party Key Discovery",
+      "path": "skills/third-party-key-discovery/SKILL.md",
+      "tags": [
+        "target",
+        "keys",
+        "frontend"
+      ],
+      "meta_phase": "target",
+      "sha256": "2fd85f115dc39f6bdd44776ab91f13152e913b41e6135c2034624d5f2c07a1c7"
+    },
+    {
+      "slug": "github-org-code-search",
+      "title": "Github Org Code Search",
+      "path": "skills/github-org-code-search/SKILL.md",
+      "tags": [
+        "target",
+        "github",
+        "code"
+      ],
+      "meta_phase": "target",
+      "sha256": "48f878f971d7c946b9a19427c8e29fdb81e7532b17d99b842abb37cd4fe0bf10"
+    },
+    {
+      "slug": "shodan-service-facets",
+      "title": "Shodan Service Facets",
+      "path": "skills/shodan-service-facets/SKILL.md",
+      "tags": [
+        "target",
+        "shodan",
+        "services"
+      ],
+      "meta_phase": "target",
+      "sha256": "877328199d59e30274e3ff0426a24d8a221baeac05239321302018f0cc3466c5"
+    },
+    {
+      "slug": "result-triage-first-look",
+      "title": "Result Triage First Look",
+      "path": "skills/result-triage-first-look/SKILL.md",
+      "tags": [
+        "triage",
+        "sampling",
+        "quality"
+      ],
+      "meta_phase": "triage",
+      "sha256": "17b0753cf820d529124c447c88d9ae0b406bf83648567a3ffff968a33a116263"
+    },
+    {
+      "slug": "confirm-with-direct-request",
+      "title": "Confirm With Direct Request",
+      "path": "skills/confirm-with-direct-request/SKILL.md",
+      "tags": [
+        "triage",
+        "confirmation",
+        "scope"
+      ],
+      "meta_phase": "triage",
+      "sha256": "69ee28bf5561dda16f669056855f3ddea64048972d003e8122c0203f9bd391d3"
+    },
+    {
+      "slug": "distinguish-index-from-live",
+      "title": "Distinguish Index From Live",
+      "path": "skills/distinguish-index-from-live/SKILL.md",
+      "tags": [
+        "triage",
+        "evidence",
+        "freshness"
+      ],
+      "meta_phase": "triage",
+      "sha256": "4f0c7cf10b7331a593a4107e7a19588fcb95bee057f026fb21560ee7b16276b1"
+    },
+    {
+      "slug": "cache-staleness-check",
+      "title": "Cache Staleness Check",
+      "path": "skills/cache-staleness-check/SKILL.md",
+      "tags": [
+        "triage",
+        "cache",
+        "dates"
+      ],
+      "meta_phase": "triage",
+      "sha256": "277e395b40cbced22dc5fbc05c373a3bbccd0539e827d87410404090a4c7e457"
+    },
+    {
+      "slug": "ownership-verification",
+      "title": "Ownership Verification",
+      "path": "skills/ownership-verification/SKILL.md",
+      "tags": [
+        "triage",
+        "ownership",
+        "scope"
+      ],
+      "meta_phase": "triage",
+      "sha256": "85541af63032d2a3778aab61b0fdd007f094c9fd6dd294d1b3d4bb5978ac8fa1"
+    },
+    {
+      "slug": "impact-before-reporting",
+      "title": "Impact Before Reporting",
+      "path": "skills/impact-before-reporting/SKILL.md",
+      "tags": [
+        "triage",
+        "impact",
+        "severity"
+      ],
+      "meta_phase": "triage",
+      "sha256": "3188df03c513fc9a8e0785ee58de82fe36a2f3596fa0496e8d9b373f03b64d7f"
+    },
+    {
+      "slug": "dedupe-findings",
+      "title": "Dedupe Findings",
+      "path": "skills/dedupe-findings/SKILL.md",
+      "tags": [
+        "triage",
+        "dedupe",
+        "reporting"
+      ],
+      "meta_phase": "triage",
+      "sha256": "84013f920952df269b24adbdd3ae3bfc8edc26d2da2314712272ba6f692a8aca"
+    },
+    {
+      "slug": "triage-note-template",
+      "title": "Triage Note Template",
+      "path": "skills/triage-note-template/SKILL.md",
+      "tags": [
+        "triage",
+        "notes",
+        "discipline"
+      ],
+      "meta_phase": "triage",
+      "sha256": "3a2089dc36e448121557afb10c1da9a43671910a8ab2624934d5692ca06c45c6"
+    },
+    {
+      "slug": "passive-evidence-capture",
+      "title": "Passive Evidence Capture",
+      "path": "skills/passive-evidence-capture/SKILL.md",
+      "tags": [
+        "report",
+        "evidence",
+        "passive"
+      ],
+      "meta_phase": "report",
+      "sha256": "f815f3270a893c16a0bfb9b5dc4b45a4cd6f19dcf5832184c53dfb194624f3e6"
+    },
+    {
+      "slug": "search-url-as-evidence",
+      "title": "Search Url As Evidence",
+      "path": "skills/search-url-as-evidence/SKILL.md",
+      "tags": [
+        "report",
+        "urls",
+        "evidence"
+      ],
+      "meta_phase": "report",
+      "sha256": "c499ee4bf15274cd8c64f3e6babb728a180466a6ec87130bbd1ccbf7c77df8d3"
+    },
+    {
+      "slug": "redaction-of-pii",
+      "title": "Redaction of Pii",
+      "path": "skills/redaction-of-pii/SKILL.md",
+      "tags": [
+        "report",
+        "redaction",
+        "privacy"
+      ],
+      "meta_phase": "report",
+      "sha256": "fa3cd48e74a01443d7afcec2ef7169d8f1171b0b3ac14c5977bd78cc36443434"
+    },
+    {
+      "slug": "scope-reference-in-dork-evidence",
+      "title": "Scope Reference in Dork Evidence",
+      "path": "skills/scope-reference-in-dork-evidence/SKILL.md",
+      "tags": [
+        "report",
+        "scope",
+        "audit"
+      ],
+      "meta_phase": "report",
+      "sha256": "b742aa19ae227b0c3b8072b9897467b59618fc72f2aae9e468aec0cf3243bad9"
+    },
+    {
+      "slug": "minimal-repro-from-dork",
+      "title": "Minimal Repro From Dork",
+      "path": "skills/minimal-repro-from-dork/SKILL.md",
+      "tags": [
+        "report",
+        "reproduction",
+        "minimal"
+      ],
+      "meta_phase": "report",
+      "sha256": "db4ccf3e4e5dfd8428e811f4b83103a535e58268cbde69a37a4fbf761b5b4b41"
+    },
+    {
+      "slug": "negative-result-logging",
+      "title": "Negative Result Logging",
+      "path": "skills/negative-result-logging/SKILL.md",
+      "tags": [
+        "report",
+        "coverage",
+        "logging"
+      ],
+      "meta_phase": "report",
+      "sha256": "aebb37b81b23b7ecd3d103d65bda46d2dcd735a3b807268ac288ed36053126a5"
+    },
+    {
+      "slug": "batch-report-structure",
+      "title": "Batch Report Structure",
+      "path": "skills/batch-report-structure/SKILL.md",
+      "tags": [
+        "report",
+        "structure",
+        "editorial"
+      ],
+      "meta_phase": "report",
+      "sha256": "4e1ff0230ac1c93d16138cfcca9a2bd856379472bbc7ab30071541ff535db8b4"
+    },
+    {
+      "slug": "reproducible-search-date",
+      "title": "Reproducible Search Date",
+      "path": "skills/reproducible-search-date/SKILL.md",
+      "tags": [
+        "report",
+        "dates",
+        "reproducibility"
+      ],
+      "meta_phase": "report",
+      "sha256": "46a4719beaf2f77c7fa8a733fcbb5b3ee9f60d627b37742de5d6a7f85aea6b73"
+    }
+  ]
+}
